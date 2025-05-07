@@ -19,8 +19,9 @@ const noTexts = [
 noButton.addEventListener("click", function () {
     clickCount++;
 
-    // 第一次点击 '不要' 按钮时取消静音
+    // 第一次点击 '不要' 按钮时开始播放视频
     if (!noMuteClicked) {
+        video.play();
         video.muted = false;
         noMuteClicked = true;
     }
@@ -60,4 +61,4 @@ yesButton.addEventListener("click", function () {
         </div>
     `;
     document.body.style.overflow = "hidden";
-});    
+});
